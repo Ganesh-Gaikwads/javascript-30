@@ -94,3 +94,39 @@ const classInfo ={
    let randomNum = Math.floor(Math.random()*5)+1;
   // let randomNum = Math.floor(Math.random()*5)+20;
    console.log(randomNum);
+
+
+
+   //--------------------------------------JS part-5 Practice Problems ------------------------------------
+
+   // Qs.1 Create a program that generates a random number representing a diceroll. [the number should be betweeb 1 and 6]
+
+   console.log("Dice Roll Program");
+
+   let diceRoll = Math.floor(Math.random()*6)+1;
+   console.log(diceRoll);
+
+
+   // Qs. 2 Create an object representing a car that store the following properties for the car: name, model , color , Print the car's Name
+
+   const cars = {
+        name : "Bolero",
+        model:2014,
+        color:"white"
+   } 
+   console.log(cars.name);
+
+   // Qs.3 Create an object Person with their name,age and city.edit the city"s original value to change it to "New York", Add new property country and set it to the united state
+
+   let PersonInfo = {
+      name: "jon doe",
+      age :34,
+      city:"Mexico"
+   } ;
+
+   console.log(PersonInfo);
+
+   PersonInfo.city="New York";
+   PersonInfo.country ="United States";
+
+   console.log(PersonInfo);
