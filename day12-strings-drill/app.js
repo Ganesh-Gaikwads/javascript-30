@@ -1,9 +1,11 @@
 
 //string drill 
 
+
 // 1. length propery
 let str1 = "Ganpati Bappa Moraya";
 console.log(str1.length);
+
 
 // indexing 
 let first = str[0];
@@ -21,29 +23,36 @@ for(let i=0; i<str.length; i++){
     }
 } console.log(count1);
 
+
 //condition + string methods - palindrome check
 let string = "kavak";
 let palindromeStr =string.split('').reverse().join('');
+
+
 // console.log(string); for debugging purpose
 if(string === palindromeStr){
     console.log(`${palindromeStr}, Palindrome string.`);
 } else{
     console.log(`${string}. not palindrome string.`);
 }
+
  
 // string Method -convert a string to uppercase and lowercase
 console.log(str.toUpperCase());
 console.log(str.toLowerCase());
+
  
 //string split + array join 
 let msg = "   Hello  ";
 let reverseMsg = msg.split('').reverse().join('');
 console.log(reverseMsg);
 
+
 // trim + replace  
 
 let trimMsg =msg.trim();
 console.log(trimMsg);
+
 
 // condition + isNaN 
 
@@ -74,19 +83,24 @@ for(let i=0; i<strinG.length; i++){
 }  console.log(freq);
 
 
+
 //------------------------------------------ A. Numbers and Math ----------------------------------
 // 1.convert kilometer to miles
+
 let km = 12;
 let  oneMile = 0.621371;
 mile= Math.round( km *oneMile);
 console.log(`${km} kilometer is  = ${mile} miles.`);
+
 
 //convert Celcius to Fahrenheit 
 let temp = 23;
 let Fahrenheit =  Math.floor(temp * 9/5 +32);
 console.log(Fahrenheit);
 
+
 // find the maximum of three number
+
 
 let a = 162;
 let b = 48904;
@@ -100,9 +114,12 @@ if(a > b && a>c){
     console.log("c is big",c);
 }
 
+
 // check if a number is evem or odd
+
 let number = 423;
 console.log((number%2==0) ? "even" : "odd");
+
 
 // print all numbers divisible by 7 between 1 to 100
 
@@ -111,6 +128,7 @@ for(let i=1; i<=100; i++){
         console.log(i);
     }
 }
+
 
 // Print the sum of digit of a number 
 let num1 = 1235;
@@ -124,13 +142,15 @@ let num1 = 1235;
  
 
 // B. Loops and Patterns
-// peint multiplication table of given number
+
+// print multiplication table of given number
 
 console.log("table of numbers");
 let  digit = 7;
 for(let i=digit; i<=digit*10; i=i+digit){
     console.log(i);
 }
+
 
 // Print factorial of a given number.
 let factorial = digit*(digit-1);
@@ -139,6 +159,7 @@ console.log(factorial);
 
 
 //-------------------------Mini Drill-----------------------
+
 // 1. reverse a string.
 let sms = "Hello";
 let revreseSms =sms.split('').reverse().join('');
@@ -198,6 +219,7 @@ for(let i = greeting.length-1; i>=0; i--){
   let char = greeting[i];
   reversed+=char
 } console.log(reversed);
+
 
 //Sum numbers 1–100
 
