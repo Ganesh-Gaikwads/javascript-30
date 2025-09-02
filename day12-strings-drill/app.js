@@ -1,9 +1,9 @@
 
-/*//string drill 
+//string drill 
 
 // 1. length propery
-let str = "Ganpati Bappa Moraya";
-console.log(str.length);
+let str1 = "Ganpati Bappa Moraya";
+console.log(str1.length);
 
 // indexing 
 let first = str[0];
@@ -13,13 +13,13 @@ console.log(`last char of string ${last}`);
 
 
 // loop+condition - counting vowels
-let count = 0;
+let count1 = 0;
 for(let i=0; i<str.length; i++){
     let ch = str[i].toLowerCase();
     if(ch ==="a" || ch ==="e" || ch ==="i" || ch==="o" || ch==="u" ){
-        count++;
+        count1++;
     }
-} console.log(count);
+} console.log(count1);
 
 //condition + string methods - palindrome check
 let string = "kavak";
@@ -113,11 +113,11 @@ for(let i=1; i<=100; i++){
 }
 
 // Print the sum of digit of a number 
-let num = 1235;
+let num1 = 1235;
  let sum = 0;
- while(num > 0){
-    sum+= num%10;
-    num=Math.floor(num/10); // remove last digits
+ while(num1 > 0){
+    sum+= num1%10;
+    num1=Math.floor(num1/10); // remove last digits
 
  }
  console.log(sum);
@@ -136,7 +136,7 @@ for(let i=digit; i<=digit*10; i=i+digit){
 let factorial = digit*(digit-1);
 console.log(factorial);
 
-*/
+
 
 //-------------------------Mini Drill-----------------------
 // 1. reverse a string.
@@ -157,11 +157,51 @@ for(let i=1; i<arr.length; i++){
 //Count vowels in a string
 
 let str = "javascript";
-let count = 0;
+let count2 = 0;
 for(let i=0; i<str.length; i++){
     let ch = str[i].toLowerCase();
     if(ch==="a" || ch==="e" || ch==="i" || ch==="o" || ch==="u"){
-        count++;
+        count2++;
     }  
+} console.log(count2);
+
+
+// fizzBuzz 
+
+let num = 12;
+
+for(let i=0; i<=50 ; i++){
+
+     if(i%3===0 && i%5===0){
+        console.log(i,"FizzBuzz");
+    }  else if(i%3===0){
+        console.log("Fizz");
+    } else if(i%5===0){
+        console.log("Buzz");
+    }else{
+        console.log(i);
+    }
+}
+
+// reverse a string
+
+console.log("using methods approch");
+
+let greeting = " Namskar everyone";
+let reverseGreet = greeting.split('').reverse().join('');
+console.log(reverseGreet);
+
+
+console.log("Using loop approch");
+let reversed = "";
+for(let i = greeting.length-1; i>=0; i--){
+  let char = greeting[i];
+  reversed+=char
+} console.log(reversed);
+
+//Sum numbers 1–100
+
+let count = 0;
+for(let i=1; i<=100; i++){
+    count=count+i
 } console.log(count);
- 
