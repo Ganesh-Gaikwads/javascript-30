@@ -1,4 +1,4 @@
-
+/*
 //string drill 
 
 
@@ -227,3 +227,124 @@ let count = 0;
 for(let i=1; i<=100; i++){
     count=count+i
 } console.log(count);
+
+*/
+
+//----------------------------- Day-Wednesday 03-09-2025 -------------------------------------
+
+// Print numbers 1 to 20.
+ 
+for(let i=1; i<=20; i++){
+     console.log(i);
+} 
+
+// Print all even numbers between 1 and 50.
+
+for(let i=2; i<=50; i=i+2){
+    console.log(i);
+}
+
+//Print all odd numbers between 1 and 50.
+for(let i=1; i<=50; i=i+2){
+    console.log(i);
+}
+
+// Print the sum of numbers from 1 to 50.
+
+let sum = 0;
+for(let i=1; i<=50; i++){
+    sum+=i;
+}console.log(sum);
+
+// Print the multiplication table of 7.
+for(let i=7; i<=70; i=i+7 ){
+    console.log(i);
+}
+
+
+for(let i=1; i<=10; i++){
+    console.log(`7 x ${i} : ${7*i}`);
+}
+// Given an array [3, 7, 1, 9, 5], print each element using a loop.
+let arr = [3,74,1,9,15];
+ 
+for(let i = 0; i < arr.length; i++){
+    console.log(arr[i]);
+}
+
+// for of loop
+
+for( element of arr){
+    console.log(element);
+}
+
+// Find the largest number in [3, 7, 1, 9, 5] using a loop
+let largestNum = arr[0];
+ for(let i=0; i<arr.length; i++){
+    if(largestNum < arr[i]){
+        largestNum=arr[i];
+    }
+   
+ }  console.log( "the largest value in the array :",largestNum);
+ 
+ // Count how many vowels are in the string "javascript loops" using a loop.
+
+ let string = "javascript loops";
+ let availableVowels = 0;
+ for(let i=0; i<string.length; i++){
+    let vowels = string[i].toLowerCase();
+     if(vowels ==="a" || vowels ==="e" || vowels ==="i" || vowels ==="o" || vowels ==="u" ){
+        availableVowels++;
+     }
+ } console.log(availableVowels);
+
+
+ // Reverse the string "mentor" using a loop (don’t use .reverse() or .split('').reverse()).
+let str = "mentor"
+ let reversedStr = '';
+ for(let i=str.length-1; i>=0; i--){
+    reversedStr +=str[i];
+ } console.log(reversedStr);
+
+
+ // Print all numbers between 1 and 100 divisible by both 3 and 5.
+ for(let i=1; i<=100; i++){
+    if(i%3===0 && i%5===0){
+        console.log(i);
+    }
+ }
+
+ // Find the smallest number in an array -👉 Example: [12, 5, 7, 22, 3] → 3.
+ 
+ let array = [12,5,7,22,3,1];
+ let smallNum = arr[0];
+ 
+
+ for(let i=0; i<=array.length; i++){
+    if(smallNum>array[i]){
+        smallNum=array[i];
+    }
+ } console.log(smallNum);
+
+ // Count consonants in a string 
+  let stringName = "JavaScripts";
+  let consonants =0;
+
+  for(let i=0; i<stringName.length; i++){
+    let ch = stringName[i].toLowerCase();
+    if(ch !== "a" || ch !== "e" || ch !== "i" || ch !== "o" || ch !== "u" ){
+        consonants++;
+    }
+  } console.log(consonants);
+
+  //Reverse the number (not string) 👉 Example: 12345 → 54321.
+  let numbers = 1234
+
+
+  // Check if a string is a palindrome (reads same forward & backword
+  let stringname = "level";
+  let reversestring = "";
+
+  for(let i=0; i<=stringname.length; i++){
+     reversestring++;
+  } console.log(reversestring);  

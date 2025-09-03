@@ -130,3 +130,6 @@ const classInfo ={
    PersonInfo.country ="United States";
 
    console.log(PersonInfo);
+
+   //------------------------objects---------------------------------
+    const user = {firstname : "Akash" }
