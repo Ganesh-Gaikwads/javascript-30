@@ -338,13 +338,99 @@ let str = "mentor"
   } console.log(consonants);
 
   //Reverse the number (not string) 👉 Example: 12345 → 54321.
-  let numbers = 1234
+  let numbers = 123456;
+  let reversed = 0;
+
+  while(numbers > 0){
+    let digit = numbers%10;
+    reversed = reversed * 10 + digit;
+    numbers = Math.floor(numbers/10)
+  } 
+  console.log(reversed);
+
+  
+
+   
+
+  // reverse number 
+
+  let num = 123456789;
+  let reverse = 0;
+
+  while(num > 0){
+    let digit = num%10;
+    reverse = reverse *10 +digit;
+    num = Math.floor(num/10)
+  } console.log(reverse);
 
 
-  // Check if a string is a palindrome (reads same forward & backword
-  let stringname = "level";
-  let reversestring = "";
 
-  for(let i=0; i<=stringname.length; i++){
-     reversestring++;
-  } console.log(reversestring);  
+// Palindrome check level  of number
+
+let number = 121;
+let original = number;
+let reverseNum = 0;
+
+while( number >0){
+    let digit = number % 10;
+    reverseNum = reverseNum * 10 + digit;
+    number = Math.floor(number/10);
+
+} console.log(original == reverseNum ? "Palindrome number" : "NOt Palidrome Number");
+
+  
+
+// palindrome check of  string name "Level"
+
+let stringNew = "DID";
+let reverseString = "";
+
+for(let i=stringNew.length; i>=0; i--){
+    reverseString +=stringNew[i]
+} console.log(stringNew === reverseString? "palindrome":"not palindrome");
+
+// finding largest number in array  for example array = [12,34,5,12,86];
+
+let arrays = [12,34,5,1,23,56];
+let BigNum = arrays[0];
+let minNum = arrays[0]
+
+for(let i=1; i<=arrays.length; i++){
+    if(BigNum < arrays[i]){
+        BigNum=arrays[i]
+    } else if( minNum > arrays[i]){
+        minNum=arrays[i];
+    }
+
+} console.log(`Largest Number in array : ${BigNum}`);
+console.log(`Smallest Number in array :${minNum}`);
+
+// find smallest number + largest number and as well as sum of all numbers
+
+let newArr = [2,4,6,8];
+let min = newArr[0];
+let max = newArr[0];
+let sumOfnumbers = 0;
+let average = 0;
+
+
+for(let i=0; i<newArr.length; i++){
+    if(newArr[i]>max) max = newArr[i];
+    if(newArr[i]<min) min= newArr[i];
+    sumOfnumbers+=newArr[i]
+   average =sumOfnumbers/newArr.length;
+} console.log(`Largest Number :${max}`);
+  console.log(`Smallest Number :${min}`);
+  console.log(`Sum of Numbers :${sumOfnumbers}`);
+  console.log(`The avarage of numbers is :${average}`);
+    
+    
+
+
+
+
+
+
+
+
+ 
