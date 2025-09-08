@@ -1,5 +1,5 @@
 // Print all numbers divisible by 7 between 1 and 100.
-
+/*
 for(let i=7; i<=100; i+=7) console.log(i);
 
 //Reverse the string "JavaScript".
@@ -76,4 +76,35 @@ for(let i=0; i<char.length; i++){
      count+=char[i]
      
 } console.log(count);
-  
+
+*/
+
+
+// Practice questions - functions
+
+// function declaration 
+
+// first Approch
+ function greetuser(name){
+    console.log(`${name},do you remember me!`);
+ } greetUser();
+
+
+// second Approch
+function greetUser(name){
+    return `hello",${name}!`;
+} greetUser();
+
+// Function Expression
+
+
+let square = function(num){
+    return num*num;
+ 
+}  ;  
+
+function addNumber (func,num){
+    return func(num);
+}
+
+  addNumber(square,5);
