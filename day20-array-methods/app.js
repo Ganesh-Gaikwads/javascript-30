@@ -284,21 +284,69 @@ for(let i=0; i<Num.length; i++){
 
 
 // 16. Find the index of `50` in `[10,20,30,40,50]`.
+   let findIndex = [10,20,30,40,50];
+   console.log(findIndex.indexOf(50));
+
 // 17. Check if `"apple"` exists in `["mango","banana","apple","grapes"]`.
+    let fruits = ["mango","banana","apple","grapes"];
+    console.log(fruits.includes("apple"));
+
 // 18. Find the maximum number in `[3,9,2,5,7]`.
+let number = [3,9,2,5,7];
+
+let Max = number[0];
+for(let i=0; i<number.length; i++){
+    if(Max < number[i]) Max=number[i];
+} 
+     console.log(Max);
+
+
 // 19. Find the minimum number in `[3,9,2,5,7]`.
-// 20. Count how many times `7` appears in `[7,2,7,3,7,4]`.
+    let nums = [3,9,2,5,7];
+    let mins = nums[0];
+    for(let i=0; i<nums.length; i++){
+        if(mins > nums[i]){
+            mins = nums[i];
+        }
+    } 
+    console.log(mins);
+
+
+// 20. Count how many times `7` appears in `[7,2,7,3,7,4,]`.
+ let numCount = [7,2,7,3,7,4];
+ let numappear = 0;
+ for(let i=0; i<numCount.length; i++){
+    if(numCount[i]===7){
+        numappear++;
+    }
+ } 
+    console.log(numappear);
+
 
  
 
 // Level 3: Transforming Arrays (10 Qs)
 
 // 21. Create a new array with each element of `[1,2,3,4,5]` doubled.
+let double = [1,2,3,4,5];
+console.log(double.map(n=>n*2));
+
+
 // 22. Square each number in `[2,4,6,8]`.
+  
 // 23. Convert `["a","b","c"]` to uppercase.
+let uppe = ["a","b","c"];
+//   console.log(uppe.touppercase());
 // 24. Filter only even numbers from `[1,2,3,4,5,6]`.
+ let numbers = [1,2,3,4,5,6];
+ console.log(numbers.filter(n=>n%2===0));
+
 // 25. Filter only odd numbers from `[1,2,3,4,5,6]`.
+console.log(numbers.filter(n=>n%2!==0));
 // 26. Remove all negative numbers from `[1,-2,3,-4,5]`.
+let negNum = [1,-2,3,-4,5];
+
+
 // 27. Add 5 to each element of `[10,20,30,40]`.
 // 28. Extract names starting with "A" from `["Aman","Ravi","Anita","John"]`.
 // 29. Find all numbers greater than 50 in `[23,67,89,12,45,90]`.
