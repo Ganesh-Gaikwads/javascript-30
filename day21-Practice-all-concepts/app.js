@@ -225,3 +225,5 @@ function getEvenNumbers(arr) {
   return result;
 }
 console.log(getEvenNumbers([12, 34, 11, 21, 54, 76, 87, 98]));
+
+
