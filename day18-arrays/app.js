@@ -1,483 +1,116 @@
+// Arrays - level 1 (Practice with manually)
 
-// Arrays
+// 1. Print the first and last element of [100, 200, 300, 400, 500].
 
-// 1. Print elements with their index
-let arr = [10,20,30];
-for(let i=0; i<arr.length; i++){
-   console.log(`${arr.indexOf(arr[i])}: ${arr[i]}`);
-}
-
-// 2. Sum of all numbers
-let arr7 = [1,2,3];
-let sum = 0;
-for(let i=0; i<arr7.length; i++) sum+=arr7[i];
-console.log(`sum of all number :${sum}`);
-
-// 3. Max / Min value
-let arr3 = [5, 1, 9, 2];
-let max = arr3[0];
-let min = arr3[0];
-for (let i = 1; i < arr3.length; i++) {
-  if (max < arr3[i]) max = arr3[i];
-  if (min > arr3[i]) min = arr3[i];
-}
-console.log(`Max Value : ${max}`);
-console.log(`Min value : ${min}`);
-
-// 4. Count occurrences of X
-let arr4 = [1,2,1,3,1];
-let count = 0;
-for(let i=0; i<arr4.length; i++){
-    let x = 1;
-    if(arr4[i]===x) count++;
-} 
-console.log(count);
-
-// 5.Remove last / first element (manually)
-let arr5 = [1,2,3];
-let result=[];
-for( let i=0; i<arr5.length; i++){
-     if(i!==0 && i !==arr5.length-1) result.push(arr5[i]);
-
-    
-} 
-console.log(result);
-
-//Reverse array without .reverse() (you did this — revisit for mastery)
-
-let reverseArr = [];
-for(let i=arr5.length-1; i>=0; i--) reverseArr.push(arr5[i]);
-console.log(reverseArr);
+let arr =  [100, 200, 300, 400, 500];
+console.log("First Elemtn of the array:",arr[0]);
+console.log("Last Element of the array :",arr[arr.length-1]);
 
 
+// 2. Manually push two numbers into [1,2,3].
 
-// Array Manupulation
-// 1.  Access & Update 
-let aray = [10,20,30,40,50];
-console.log("First Element of an array:",aray[0]);
-console.log( "Last element of an array:",aray[aray.length-1]);
-aray[2]=99;
-console.log("Updated array with third element:",aray);
-
-// 2. sum of element 
-let nums =[5,10,15,20];
-let sumofArr = 0;
-for(let el of nums) {  // used for... loop 
-   sumofArr+=el; 
-} 
-console.log(sumofArr);
-
-let sumofarr = 0;
-for(let i=0; i<nums.length; i++) sumofarr+=nums[i];  // using for loop 
-console.log( `sum of an array :${sumofarr}`);
-
-// 3. Reverse Array
-let arrays = [1,2,3,4,5];
-let revArr = [];
-
-for(let i=arrays.length-1; i>=0; i--){
-  revArr.push(arrays[i])
-
-}
-console.log("Reversed Array:", revArr);
-
-console.log("Reverse array by using method:",arrays.reverse()); // using reverse() method.
-
-// 4 count specific number 
-let number = [7,2,7,3,7,4];
-let counts = 0;
-for(let i=0; i<number.length; i++){
-  if(number[i]===7){
-    counts++
-  }
-} 
-console.log("Number count:", counts);
-
-// Merge Array
 let arr1 = [1,2,3];
-let arr2 = [4,5,6];
-let mergeArr = [];
+arr1[arr1.length] = 4;
+arr1[arr1.length] = 5;
+console.log(arr1);
 
-for(let i=0; i<arr1.length; i++){
-  mergeArr.push(arr1[i])
-} ;
+// 3. Remove the last element from [10,20,30,40] manually.
 
-for(let i=0; i<arr2.length; i++){
-  mergeArr.push(arr2[i])
-}
-
-console.log(mergeArr);
-
-console.log(arr1.concat(arr2)); // used concat 
+let arr2 = [10,20,30,40];
+arr2.length = arr2.length-1;
+console.log("Removed last element of array:",arr2);
 
 
+// 4. Find the sum of [2, 4, 6, 8, 10].
 
-
-
-
-
-
-
-
-// Array Practice 
-
-let arrays = [1,2,3,4]; //  use [] for 99%  of cased = cleaner and predictable
-let arr2 = new Array(5);  // when specifically want an empty arr ot fixed length
-let arr3 = new Array(23);
-console.log("print empty array ",arr2);
-
-
-// Accessing  by index 
-
-console.log(arr3[0]);
-console.log(arrays[2]);
-
-// Length Property 
-
-console.log(arrays.length); // use to know arrays length
-
-
-//Manual push/pop logic (without using push);
-arrays[arrays.length]=40; // Manual Push
-console.log(arrays);
-
-arrays.length = arrays.length-2; // Manual pop
-console.log(arrays);  
-
-
-// # practice
-// 1. Manually add 3 new numbers to an array (without push).
-let ar = [10,20,30];
-ar[ar.length]=40;
-ar[ar.length]=50;
-ar[ar.length]=60;
-console.log(ar);
-
-// 2. Manually remove the last element (without pop).
-ar.length=ar.length-1; // Manual pop
-console.log(ar);  
-
-//  Print array elements one by one with for loop
-
-// 1. iteration style:  (classic for loop)
-for(let i=0; i<ar.length; i++){
-    console.log(ar[i]);
-}
-
-
-// 2. for..of(cleaner)
-console.log("using for..of loop for more cleaner");
-
-for(let el of ar){
-    console.log(el);
-}
-
-// 3. forEach (built-in, but practice last)
-console.log("use forEach built in method");
-
-ar.forEach( num =>console.log(num));
-
-
-// # Practice 
-// 1. Print all elements in [1,2,3,4,5] with for loop and for...of.
-let elements = [1,2,3,4,5];
-
-for(let i=0; i<elements.length; i++){
-    console.log(elements[i]);
-}
-
-// using for..of loop
-for(let num of elements){
-    console.log(num);
-}
-
-//Find the sum of [5, 10, 15, 20] manually with a loop.
-let Arr = [5, 10, 15, 20];
+let arr3 = [2,4,6,8,10];
 let sum = 0;
-for(let i=0; i<Arr.length; i++){
-    sum+=Arr[i];
-} 
-console.log(`sum of array : ${sum}`);
+for(let i=0; i<arr3.length; i++){
+ sum+=arr3[i]
+}
 
-// Count how many odd numbers in [2, 5, 7, 8, 10].
-let Arr1 = [2, 5, 7, 8, 10];
-let count = 0;
-for(let i=0; i<Arr1.length; i++){
-    if(Arr1[i]%2!==0){
+console.log("sum of array:",sum);
+
+// 5. Count how many odd numbers are in [11, 12, 13, 14, 15].
+
+let arr4 =  [11, 12, 13, 14, 15];
+let count =0;
+for(let i=0; i<arr4.length; i++){
+    if(arr4[i]%2!==0){
         count++;
     }
-} 
-console.log(count);
-
-// Mini Problems
-
-// 1. Find the largest and smallest number manually.
-
-let max = Arr1[0];
-let min = Arr1[0];
-
-for(let i=0; i<Arr1.length; i++){
-     if(Arr1[i]<min) min=Arr1[i];
-    if(Arr1[i]>max) max=Arr1[i];
-   
-    } 
-console.log("small number:",min);
-console.log("largest number",max);
-
-
-//Reverse an array manually (without reverse())
-let revArr1 = [];
-for(let i=Arr1.length-1; i>=0; i--){
-    revArr1.push(Arr1[i]);
-} 
-console.log("Original Arr :",Arr1);
-console.log("Reverse Array :",revArr1);
-
-// Count frequency of 7 in [7, 2, 7, 3, 7, 4].
-let freq = [7, 2, 7, 3, 7, 4];
-let num = 7;
-let freCount=0;
-for(let i=0; i<freq.length; i++){
-    if(freq[i]===num){  // condition can check number of 7 but i take variable to check other numbers also
-        freCount++;
-    }  
-} 
-console.log(freCount);
-
-// Merge two arrays manually (without concat).
- 
-let  arrOne = [1,2,3,4];
-let arrTwo =[5,6,7,8];
-let merged =[ ];
-
-// first w'll  push arrOne to mergerd arr through for loop
-
-for(let i=0; i<arrOne.length; i++){
-    merged[merged.length]=arrOne[i]
-} 
-
-// now we'll push arrTwo 
-
-for(let i=0; i<arrTwo.length; i++){
-    merged[merged.length]=arrTwo[i]
 }
+ console.log(count);
 
-console.log(merged);
+ // Array - Level 2 (Built-in Methods)
 
+ // Map()
 
-// Array manipulation drill
+ // 1. Double every element in [1, 2, 3, 4, 5] using map().
+ let arr5 =[1, 2, 3, 4, 5];
+ let Double = arr5.map((n)=>n*2)
+ console.log(Double);
+ 
+ // 2. Convert an array of names ["ganesh", "rahul", "sita"] into uppercase using map().
+ let arr6 =  ["ganesh", "rahul", "sita"];
+ let uppercase = arr6.map((arr)=>arr.toUpperCase())
+ console.log(uppercase);
 
+// Filter();
+
+ // 3. Filter only even numbers from [11, 20, 31, 42, 53, 64].
+ let arr7 = [11, 20, 31, 42, 53, 64];
+ let evenNum = arr7.filter((n)=>(n%2===0));
+ console.log(evenNum);
+
+ // 4. From ["apple", "banana", "kiwi", "grape"], filter out words with length > 5.
   
- 
- // Array Manipulation Drill Set (50 Questions)**
+ let arr8 =  ["apple", "banana", "kiwi", "grape"];
+ let length =  arr8.filter((str)=>str.length>5)
+ console.log(length);
 
-//==== Level 1: Fundamentals (10 Qs)
-//1. Create an array of numbers from 1 to 10 and print it.
-let numArr = [1,2,3,4,5,6,7,8,9,10];
-console.log(numArr);
+ // Reduce ( );
 
-//2. Access the first and last  element of an array.
-console.log(`fist element of an array : ${numArr[0]}`);
-console.log(`last element of an array :${numArr[numArr.length-1]}`);
+ // 5. Find the sum of [5, 10, 15, 20] using reduce().
+ let arr9 = [5, 10, 15, 20];
+ let sum1 = arr9.reduce((sum,el)=>sum+el);
+ console.log(sum1);
 
-
-//3. Find the length of `[5, 8, 12, 20, 33]`.
-let findLength = [5, 8, 12, 20, 33];
-console.log(findLength.length);
-
-//4. Manually push a number at the end of `[1,2,3]`.
-let pushNum = [1,2,3];
-  pushNum[pushNum.length] = 4;
-  console.log(pushNum);
-
-//5. Manually remove the last element of `[10, 20, 30, 40]`.
-let lastElement = [10, 20, 30, 40];
-lastElement.length=lastElement.length-1;
-console.log(lastElement);
-
-//6. Add a number to the beginning of `[2,3,4]` manually.
-let beggin = [2,3,4];
-beggin[beggin.length-3]=1;
-console.log(beggin);
-
-//7. Remove the first element of `[100, 200, 300]` manually.
-let firstel = [100,200,300];
-firstel.length=firstel.length-1;
-console.log(firstel);
-
-//8. Print each element of `[11,22,33,44]` using a `for` loop.
-let element = [11,22,33,44];
-for(let i=0; i<element.length; i++){
-    console.log(element[i]);
-}
-
-//  9. Print each element of `[11,22,33,44]` using `for...of`.
-
-
-for(el of element){
-    console.log(el);
-
-}
-
-//10. Print each element of `[11,22,33,44]` using `forEach()`.
-
-console.log("use forEach method to print element");
-element.forEach( el=>{
-    console.log(el);
-})
-
-
-
-
-
-// Level 2: Searching + Summation (10 Qs)
-
-// 11. Find the sum of `[5, 10, 15, 20]`.
- let add =  [5, 10, 15, 20];
- let sumArr = 0;
-
- for(let i=0; i<add.length; i++){
-    sumArr+=add[i];
- } 
- console.log("sum of arr: ",sumArr);
-
- //12. Find the product of `[2, 3, 4]`.
- let Arr4= [2,3,4];
- let product = 1;
-  
- for(let i=0; i<Arr4.length; i++){
-    product*=Arr4[i];
- }
- console.log(product);
-
- 
-// 13. Count how many even numbers are in `[1,2,3,4,5,6,7,8,9,10]`.
-
-let Num = [1,2,3,4,5,6,7,8,9,10];
-let evenCount =0;
-for(let i=0; i<Num.length; i++){
-    if(Num[i]%2===0){
-        evenCount++;
+ // 6. Find the maximum number in [12, 45, 23, 67, 34] using reduce().
+ let arr10 = [12, 45, 23, 67, 34];
+ let max = arr10.reduce((max, el)=>{
+    if(el > max){
+        return el;
+    } else{
+        return max;
     }
-} console.log(evenCount);
+ });
 
-// 14. Count how many odd numbers are in `[1,2,3,4,5,6,7,8,9,10]`.
- let oddCount = 0; 
-for(let i=0; i<Num.length; i++){
-    if(Num[i]%2!==0){
-   oddCount++
-    }
-} console.log(oddCount);
+ console.log("Largest Number in Array:",max);
 
-// 15. Check if `25` exists in `[5,10,15,20,25,30]`.
- let checkNum = [5,10,15,20,25,30];
- let exitst = true;
+ // sort( );
+
+ // 7.Sort [40, 10, 100, 30, 20] in ascending order.
+ let arr11 = [40, 10, 100, 30, 20];
+ let sortArr = arr11.sort((a, b)=>a-b);
+ console.log(sortArr);
+
+ // 8. Sort ["zebra", "apple", "mango", "banana"] alphabetically.
+ let arr12 = ["zebra", "apple", "mango", "banana"];
+ let SortStr = arr12.sort( );
+ console.log(SortStr);
+
+ // Find( );
  
- for(let i=0; i<checkNum.length; i++){
-    if(checkNum[i]===25) exitst+=true;
- } console.log(exitst);
-
-
-
-// 16. Find the index of `50` in `[10,20,30,40,50]`.
-   let findIndex = [10,20,30,40,50];
-   console.log(findIndex.indexOf(50));
-
-// 17. Check if `"apple"` exists in `["mango","banana","apple","grapes"]`.
-    let fruits = ["mango","banana","apple","grapes"];
-    console.log(fruits.includes("apple"));
-
-// 18. Find the maximum number in `[3,9,2,5,7]`.
-let number = [3,9,2,5,7];
-
-let Max = number[0];
-for(let i=0; i<number.length; i++){
-    if(Max < number[i]) Max=number[i];
-} 
-     console.log(Max);
-
-
-// 19. Find the minimum number in `[3,9,2,5,7]`.
-    let nums = [3,9,2,5,7];
-    let mins = nums[0];
-    for(let i=0; i<nums.length; i++){
-        if(mins > nums[i]){
-            mins = nums[i];
-        }
-    } 
-    console.log(mins);
-
-
-// 20. Count how many times `7` appears in `[7,2,7,3,7,4,]`.
- let numCount = [7,2,7,3,7,4];
- let numappear = 0;
- for(let i=0; i<numCount.length; i++){
-    if(numCount[i]===7){
-        numappear++;
-    }
- } 
-    console.log(numappear);
-
-
+ // 9. Find the first number greater than 50 in [23, 45, 67, 89, 12].
  
+ let arr13 = [23, 45, 67, 89, 12];
+ let greaterNum = arr13.find((el)=>el>50);
+ console.log(greaterNum);
 
-// Level 3: Transforming Arrays (10 Qs)
+ // FindIndexOf( );
 
-// 21. Create a new array with each element of `[1,2,3,4,5]` doubled.
-let double = [1,2,3,4,5];
-console.log(double.map(n=>n*2));
-
-
-// 22. Square each number in `[2,4,6,8]`.
-  
-// 23. Convert `["a","b","c"]` to uppercase.
-let uppe = ["a","b","c"];
-//   console.log(uppe.touppercase());
-// 24. Filter only even numbers from `[1,2,3,4,5,6]`.
- let numbers = [1,2,3,4,5,6];
- console.log(numbers.filter(n=>n%2===0));
-
-// 25. Filter only odd numbers from `[1,2,3,4,5,6]`.
-console.log(numbers.filter(n=>n%2!==0));
-// 26. Remove all negative numbers from `[1,-2,3,-4,5]`.
-let negNum = [1,-2,3,-4,5];
-
-
-// 27. Add 5 to each element of `[10,20,30,40]`.
-// 28. Extract names starting with "A" from `["Aman","Ravi","Anita","John"]`.
-// 29. Find all numbers greater than 50 in `[23,67,89,12,45,90]`.
-// 30. Convert `[1,2,3]` into `["1","2","3"]`.
-
- 
-
-//Level 4: Combining + Modifying Arrays (10 Qs)
-
-// 31. Merge `[1,2,3]` and `[4,5,6]` manually.
-// 32. Merge `[1,2]` and `[3,4]` using `concat`.
-// 33. Copy `[5,6,7,8]` into a new array using a loop.
-// 34. Copy `[5,6,7,8]` using the spread operator.
-// 35. Slice `[10,20,30,40,50]` from index 1 to 3.
-// 36. Splice `[1,2,3,4,5]` to remove the third element.
-// 37. Insert `99` at index 2 in `[10,20,30,40]`.
-// 38. Replace element at index 1 in `[5,6,7,8]` with `100`.
-// 39. Flatten `[1,[2,3],[4,[5]]]` into `[1,2,3,4,5]`.
-// 40. Remove duplicates from `[1,2,2,3,4,4,5]`.
-
-
-
-// Level 5: Mixed Challenges (10 Qs)
-
-// 41. Reverse `[1,2,3,4,5]` manually.
-// 42. Reverse `[1,2,3,4,5]` using `reverse()`.
-// 43. Find the average of `[10,20,30,40,50]`.
-// 44. Find the second largest number in `[10,50,20,40,30]`.
-// 45. Find the second smallest number in `[10,50,20,40,30]`.
-// 46. Rotate `[1,2,3,4,5]` → `[5,1,2,3,4]`.
-// 47. Rotate `[1,2,3,4,5]` → `[3,4,5,1,2]`.
-// 48. Find common elements of `[1,2,3,4]` and `[3,4,5,6]`.
-// 49. Find elements present in `[1,2,3,4]` but not in `[3,4,5,6]`.
-// 50. Convert `[10,20,30]` into an object like `{0:10,1:20,2:30}`.
-
- 
-
-
+ // 10. Find the index of "banana" in ["apple", "mango", "banana", "grape"].
+ let arr14 = ["apple", "mango", "banana", "grape"];
+ let banana = arr14.indexOf("banana");
+ console.log(banana);
