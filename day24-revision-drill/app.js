@@ -1,3 +1,4 @@
+ /*
  // Fundamentals Warm-Up Drill (10 Questions)
 
  //  1. Write a function checkSign(n) → prints "Positive", "Negative" or "Zero" based on n.
@@ -149,3 +150,61 @@ function secondLargest(arr){
 
 } 
 console.log(secondLargest(arrays));
+
+*/
+
+
+
+// 1.Write a function isLeapYear(year) that returns true if the year is a leap year, otherwise false.
+// (Hint: divisible by 4 but not 100, or divisible by 400)
+
+function isLeapYear(year) {
+  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    return `${year} : isLeapYear`;
+  } else {
+    return `${year} : is not LeapYear`;
+  }
+}
+  console.log(isLeapYear(1996));
+
+
+// 2.  Write a function countWords(str) that counts how many words are in "I love JavaScript so much".
+// (Hint: split by " ")
+
+function countWords(str) {
+  let words = str.split(" ");
+  let count = 0;
+  for (let char in words) {
+    count++;
+  }
+  return count;
+}
+console.log(countWords("i am ganesh gaikwad form pune "));
+
+
+// 3.Strings => Write a function removeSpaces(str) that removes all spaces from a string.
+// Example: "I love JS" → "IloveJS"
+
+function removeSpaces(str){
+  return str.replace(/ /g, '');
+}
+
+console.log(removeSpaces("i love js"));
+console.log(removeSpaces("i am ganesh gaikwad form pune "));
+
+// 4. Given [12, 5, 8, 130, 44], write a function filterGreaterThan10(arr) that returns only numbers > 10.
+
+function filterGreaterThan10(arr){
+  return arr.filter((n)=>n>10);
+}
+
+console.log(filterGreaterThan10([12, 5, 8, 130, 44]));
+
+// 5.Write a function findAverage(arr) that finds the average of numbers in an array.Example: [10, 20, 30] → 20
+
+function findAverage(arr){
+   let sum = arr.reduce((sum, el)=>sum+el)
+    return Math.floor(sum/arr.length-1);
+ 
+}
+console.log(findAverage([12, 5, 8, 130, 44]));
