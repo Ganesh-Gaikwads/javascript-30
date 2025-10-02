@@ -1,0 +1,19 @@
+body{
+  text-align: center; 
+}
+
+
+
+div{
+  height: 100px;
+  width: 250px;
+  border: 2px solid black;
+    margin: auto;
+    padding-top: 20px;
+    color: white;
+    font-family: monospace;
+    font-size: large;
+    border-radius: 50px;
+  
+  
+}
