@@ -1,0 +1,10 @@
+h1{
+  font-family: monospace;
+  color: rgb(10, 96, 99);
+}
+
+.line{
+  border: 1px solid rgb(25, 162, 220);
+  margin-top: 50px;
+   
+}
