@@ -65,3 +65,17 @@ card.addEventListener('click', function(){
 
  newDiv.innerText = ++count;
 })
+
+
+let Count = 1;
+
+let intervalID = setInterval(()=>{
+  if(count>=100){
+    clearInterval(intervalID);
+  }
+ card.click();
+})
+
+
+let input = document.querySelector('input');
+ 
