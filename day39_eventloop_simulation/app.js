@@ -1,4 +1,4 @@
-/*
+
 
 
 //Example-1
@@ -121,7 +121,7 @@ x.then((msg) => {
   
 });
 
-*/
+
 
 
 let Mini=  new Promise((res, rej)=>{
